@@ -1,0 +1,46 @@
+.container{
+    width:50%;
+    margin:0 auto;
+}
+
+
+
+
+nav > ul {
+    display:flex;
+    flex-flow:row nowrap;
+    list-style: none;
+    column-gap: 10%;
+    /* padding:0; */
+}
+
+nav > ul a{
+    text-decoration: none;
+    color:black;
+    align-self: flex-start;
+}
+
+
+.services-hover{
+    position: relative;
+    
+}
+.services-dropdown{
+    border:1px solid grey;
+    z-index: 5;
+    position:absolute;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding:1rem .5rem;
+    background: rgba(211, 185, 185, 0.3);
+    list-style: none;
+}
+
+.services-dropdown li{
+    padding:.5rem 0;
+}
+
+.hidden{
+    display:none;
+}
