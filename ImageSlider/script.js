@@ -1,8 +1,17 @@
-const allImages = []
+let navButtons = document.querySelectorAll("a");
 
-https://pixabay.com/get/g812260ee20da3ce089371af26cf4a5760ef0620cef1b7bcd80abe8a9ed96379e0f10fc03ee7f5bf42e196838f2b6f9b2_1280.jpg
-https://pixabay.com/get/gb2a493d3e338b1786d8ca6321447019ec10d7c485ed033dea66b07e05885ccbafde25123ba6135c5ab142ebd5f81ba25_1280.jpg
-https://pixabay.com/get/gfe4965158472a591b579675bfce16c5604ccd19b79509418e27d439f67ad2090607a369153589dc81dea66f9387cbce3_1280.jpg" 
-https://pixabay.com/get/ged389eae325e32f10e88f3d7b55a60a0b69c2dec995d0b18c04633e24fe99d829b543dcbb035de704e57ca6ae2dccf86_1280.jpg
-https://pixabay.com/get/g27f114ba050739b84dd46b98f921d85587326a3d3acf56e9543306ee1eaca81dc623cb3ba64c1e3aa55fa230039468c6_1280.jpg
-https://pixabay.com/get/g3aaf18b69b17a34a9b30cc840bd8f88695e80182660b37178119c12426360449008be5c851912e36c3c3abf26374f954_1280.jpg
+navButtons.forEach(item => {
+    item.addEventListener('click',activeTab)
+})
+
+
+function activeTab(e){
+        if(e.currentTarget !== e.target){
+            return
+        }
+        navButtons.forEach(item => {
+            item.classList.remove("background")
+        })
+        e.target.classList.add("background")
+    
+}
