@@ -1,17 +1,24 @@
+*{
+    /* border:1px solid red; */
+}
+
 .container{
-    width:50%;
-    margin:0 auto;
+    width:80%;
+   margin: 0 auto;
 }
 
 
-
+nav{
+    display:flex;
+    justify-content: center;
+}
 
 nav > ul {
     display:flex;
     flex-flow:row nowrap;
     list-style: none;
     column-gap: 10%;
-    /* padding:0; */
+    padding:0;
 }
 
 nav > ul a{

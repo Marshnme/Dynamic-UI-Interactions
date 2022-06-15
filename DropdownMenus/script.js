@@ -5,7 +5,7 @@ let dropDown = function(e){
     if(e.currentTarget !== e.target){
         return
     }
-    e.target.nextElementSibling.classList.toggle("hidden")
+    e.target.nextElementSibling.classList.remove("hidden")
     
 }
 
