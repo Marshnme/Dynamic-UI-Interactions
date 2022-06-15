@@ -5,7 +5,7 @@ let dropDown = function(e){
     if(e.currentTarget !== e.target){
         return
     }
-    e.target.nextElementSibling.classList.remove("hidden")
+    e.target.nextElementSibling.classList.toggle("hidden")
     
 }
 
@@ -25,6 +25,6 @@ let removeDropDown = function(e){
 }
 
 
-services.addEventListener('mouseover',dropDown)
+services.addEventListener('click',dropDown)
 // services.addEventListener('mouseover',removeDropDownFromParent)
 servicesDropDown.addEventListener('mouseleave',removeDropDown)
