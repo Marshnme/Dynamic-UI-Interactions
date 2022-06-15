@@ -67,8 +67,9 @@ main{
   }
 
 .img-holder{
-    max-width: 85%;
-    height: 70vh;
+    min-width: 65%;
+    /* max-width: 70%; */
+    height: 80vh;
     flex-shrink: 0;
     padding:1rem;
     scroll-snap-align: center;
