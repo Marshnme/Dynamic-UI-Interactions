@@ -13,7 +13,6 @@ function activeTab(e){
             item.classList.remove("background")
         })
         e.target.classList.add("background")
-    
 }
 
 
@@ -37,26 +36,58 @@ let imagesContainer = document.querySelector(".images-container")
 imagesContainer.addEventListener("scroll",debounce(moveNavButtons))
 
 function moveNavButtons(e){
-   let scrollLeftVal = e.currentTarget.scrollLeft
-   switch(true){
-    case scrollLeftVal >= 0 && scrollLeftVal <= 700:
-        console.log("nav1")
-        break
-    case scrollLeftVal > 700 && scrollLeftVal <= 1500:
-        console.log("nav2");
-        break
-    case scrollLeftVal > 1500 && scrollLeftVal <= 2430:
-        console.log("nav3");
-        break
-    case scrollLeftVal > 2430 && scrollLeftVal <= 3300:
-        console.log("nav 4");
-        break
-    case scrollLeftVal > 3300 && scrollLeftVal <= 3900:
-        console.log("nav5")
-        break
- 
-   case scrollLeftVal > 3900:
-        console.log("nav 6");
-        break  
+    let imgs = document.querySelectorAll(".slider-img");
+    
+    function rectEle(ele){
+        return ele.getBoundingClientRect()
     }
+        
+    let currtargetrect = e.target.getBoundingClientRect()
+   
+    navButtons.forEach(item =>{
+        switch(true){
+            case currtargetrect.left < rectEle(imgs[0]).left && currtargetrect.right > rectEle(imgs[0]).right:
+                if(item.hash== "#one"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break
+            case currtargetrect.left < rectEle(imgs[1]).left && currtargetrect.right > rectEle(imgs[1]).right:
+                if(item.hash== "#two"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break
+            case currtargetrect.left < rectEle(imgs[2]).left && currtargetrect.right > rectEle(imgs[2]).right:
+                if(item.hash== "#three"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break
+            case currtargetrect.left < rectEle(imgs[3]).left && currtargetrect.right > rectEle(imgs[3]).right:
+                if(item.hash== "#four"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break
+            case currtargetrect.left < rectEle(imgs[4]).left && currtargetrect.right > rectEle(imgs[4]).right:
+                if(item.hash== "#five"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break
+            case currtargetrect.left < rectEle(imgs[5]).left && currtargetrect.right > rectEle(imgs[5]).right:
+                if(item.hash== "#six"){
+                    item.classList.add("background")
+                }else{
+                    item.classList.remove("background")
+                }
+            break  
+        }
+    })
 }
