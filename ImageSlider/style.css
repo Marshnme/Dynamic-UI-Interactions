@@ -67,7 +67,7 @@ main{
   }
 
 .img-holder{
-    min-width: 65%;
+    min-width: 70%;
     /* max-width: 70%; */
     height: 80vh;
     flex-shrink: 0;

@@ -43,46 +43,72 @@ function moveNavButtons(e){
     }
         
     let currtargetrect = e.target.getBoundingClientRect()
-   
+    // timeout interval make certain image lineup with 
+    // currtargetrect.x
+    console.log(currtargetrect.x,imgs[1].x)
     navButtons.forEach(item =>{
+        
         switch(true){
             case currtargetrect.left < rectEle(imgs[0]).left && currtargetrect.right > rectEle(imgs[0]).right:
-                if(item.hash== "#one"){
+                if(item.hash == "#one"){
                     item.classList.add("background")
+                    // setInterval(function(){
+                    //     e.target.scrollLeft = rectEle(imgs[1]).left
+                    // },6000)
                 }else{
                     item.classList.remove("background")
                 }
             break
             case currtargetrect.left < rectEle(imgs[1]).left && currtargetrect.right > rectEle(imgs[1]).right:
-                if(item.hash== "#two"){
+               
+                if(item.hash == "#two"){
+                    // setInterval(function(){
+                    //     e.target.scrollLeft = rectEle(imgs[2]).left
+                    // },6000)
                     item.classList.add("background")
                 }else{
                     item.classList.remove("background")
                 }
             break
             case currtargetrect.left < rectEle(imgs[2]).left && currtargetrect.right > rectEle(imgs[2]).right:
-                if(item.hash== "#three"){
+                // setInterval(function(){
+                //     e.target.scrollLeft = rectEle(imgs[3]).left
+                // },6000)
+                if(item.hash == "#three"){
+                    
                     item.classList.add("background")
                 }else{
                     item.classList.remove("background")
                 }
             break
             case currtargetrect.left < rectEle(imgs[3]).left && currtargetrect.right > rectEle(imgs[3]).right:
-                if(item.hash== "#four"){
+                // setInterval(function(){
+                //     e.target.scrollLeft = rectEle(imgs[4]).left
+                // },6000)
+                if(item.hash == "#four"){
+                    
                     item.classList.add("background")
                 }else{
                     item.classList.remove("background")
                 }
             break
             case currtargetrect.left < rectEle(imgs[4]).left && currtargetrect.right > rectEle(imgs[4]).right:
-                if(item.hash== "#five"){
+                // setInterval(function(){
+                //     e.target.scrollLeft = rectEle(imgs[5]).left
+                // },6000)
+                if(item.hash == "#five"){
+                    
                     item.classList.add("background")
                 }else{
                     item.classList.remove("background")
                 }
             break
             case currtargetrect.left < rectEle(imgs[5]).left && currtargetrect.right > rectEle(imgs[5]).right:
-                if(item.hash== "#six"){
+                // setInterval(function(){
+                //     e.target.scrollLeft = rectEle(imgs[0]).left
+                // },6000)
+                if(item.hash == "#six"){
+                    
                     item.classList.add("background")
                 }else{
                     item.classList.remove("background")
